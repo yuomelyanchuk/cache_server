@@ -17,8 +17,6 @@
 start(_StartType, _StartArgs) ->
 
     %%{ok, Port} = application:get_env(port),
-    %%Port=application:get_env(cache_server,port),
-
     Dispatch = cowboy_router:compile([
         {'_', [
             {"/api/cache_server", cache_server_handler, []}
